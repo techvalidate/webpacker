@@ -3,7 +3,7 @@ const path = require('path')
 const config = require('../config')
 
 const postcssConfigPath = path.resolve(process.cwd(), '.postcssrc.yml')
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction = config.env.NODE_ENV === 'production'
 const extractCSS = !(config.dev_server && config.dev_server.hmr)
 
 const extractOptions = {

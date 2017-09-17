@@ -1,6 +1,6 @@
+const { join } = require('path')
 const config = require('../config')
 const assetHost = require('../asset_host')
-const { join } = require('path')
 
 module.exports = {
   test: /\.(jpg|jpeg|png|gif|svg|eot|otf|ttf|woff|woff2)$/i,

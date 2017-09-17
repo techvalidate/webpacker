@@ -21,14 +21,18 @@ module.exports = class extends Environment {
     result.output.pathinfo = true
     result.devtool = 'cheap-eval-source-map'
     result.devServer = {
+      clientLogLevel: 'none',
+      compress: true,
+      disableHostCheck: dev_server.disable_host_check,
       host: dev_server.host,
       port: dev_server.port,
       https: dev_server.https,
       hot: dev_server.hmr,
       contentBase: assetHost.path,
+      inline: dev_server.inline,
+      useLocalIp: dev_server.use_local_ip,
+      public: dev_server.public,
       publicPath: assetHost.publicPath,
-      clientLogLevel: 'none',
-      compress: true,
       historyApiFallback: true,
       headers: {
         'Access-Control-Allow-Origin': '*'

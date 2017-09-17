@@ -1,6 +1,6 @@
 const config = require('../config')
 
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction = config.env.NODE_ENV === 'production'
 const extractCSS = !(config.dev_server && config.dev_server.hmr)
 
 module.exports = {
