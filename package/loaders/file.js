@@ -1,5 +1,5 @@
 const { join } = require('path')
-const config = require('../config')
+const { source_path } = require('../config')
 const assetHost = require('../asset_host')
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
     loader: 'file-loader',
     options: {
       name: '[path][name]-[hash].[ext]',
-      context: join(config.source_path),
+      context: join(source_path),
       publicPath: assetHost.publicPathWithHost
     }
   }]
