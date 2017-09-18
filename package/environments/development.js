@@ -1,7 +1,7 @@
+const webpack = require('webpack')
 const Environment = require('../environment')
 const { dev_server: devServer } = require('../config')
 const assetHost = require('../asset_host')
-const webpack = require('webpack')
 
 module.exports = class extends Environment {
   constructor() {
