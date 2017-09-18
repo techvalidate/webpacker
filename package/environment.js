@@ -10,6 +10,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 
 const config = require('./config')
+const env = require('./env')
 const assetHost = require('./asset_host')
 
 function getLoaderMap() {
@@ -24,7 +25,7 @@ function getLoaderMap() {
 
 function getPluginMap() {
   const result = new Map()
-  result.set('Environment', new webpack.EnvironmentPlugin(config.env))
+  result.set('Environment', new webpack.EnvironmentPlugin(env))
   result.set('ExtractText', new ExtractTextPlugin('[name]-[contenthash].css'))
   result.set('Manifest', new ManifestPlugin({ publicPath: assetHost.publicPath, writeToFileEmit: true }))
   return result

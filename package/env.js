@@ -18,7 +18,6 @@ const envFiles = [
 
 envFiles.forEach((envFile) => {
   const envFilePath = resolve(process.cwd(), envFile)
-
   if (existsSync(envFilePath)) {
     dotEnv.config({
       path: envFilePath

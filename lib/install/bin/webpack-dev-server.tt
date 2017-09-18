@@ -41,6 +41,7 @@ env = { "NODE_PATH" => NODE_MODULES_PATH.shellescape }
 cmd = [
   "#{NODE_MODULES_PATH}/.bin/webpack-dev-server",
   "--progress",
+  "--color",
   "--config", WEBPACK_CONFIG
 ]
 

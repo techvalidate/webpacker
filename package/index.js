@@ -4,10 +4,10 @@
 const { resolve } = require('path')
 const { existsSync } = require('fs')
 const Environment = require('./environment')
-const { env } = require('./config')
+const { NODE_ENV } = require('./env')
 
 function createEnvironment() {
-  const path = resolve(__dirname, 'environments', `${env.NODE_ENV}.js`)
+  const path = resolve(__dirname, 'environments', `${NODE_ENV}.js`)
   const constructor = existsSync(path) ? require(path) : Environment
   return new constructor()
 }

@@ -40,7 +40,7 @@ development:
     https: false
     public: localhost:3035
     disable_host_check: true
-    inline: false
+    inline: true
     use_local_ip: false
 
 test:
